@@ -11,9 +11,12 @@
 #import "CAccount.h"
 #include "KAccount.h"
 
+//账户保存本地数据键
+#define CurrentAccount @"CurrentAccount"
 #define PAccounts @"pAccounts"
 #define CAccounts @"cAccounts"
 #define KAccounts @"kAccounts"
+
 
 @class PAccount;
 @class CAccount;
@@ -24,7 +27,7 @@
 @property (nonatomic,strong) NSMutableArray<PAccount*> * pAccounts;
 @property (nonatomic,strong) NSMutableArray<KAccount*>  * kAccounts;
 @property (nonatomic,strong) NSMutableArray<CAccount*>  * cAccounts;
-@property (nonatomic, strong) Account *currentAccount;
+@property (nonatomic,strong) Account *currentAccount;
 
 
 /**
@@ -34,34 +37,4 @@
  */
 +(AccountManager*)shareAccount;
 
-/**
- *  读取当前账户方法
- *
- *  @return 返回当前账户模型
- */
--(Account*)getCurrentAccountForKey:(NSString *)key;
-
-/**
- *  保存当前账户方法
- *
- */
--(void)saveCurrentAccount:(Account *)account forKey:(NSString *)key;
-
-/**
- *  读取本地PAccount
- *
- */
-- (PAccount *)readPAccount;
-
-/**
- *  读取本地CAccount
- *
- */
-- (CAccount *)readCAccount;
-
-/**
- *  读取本地KAccount
- *
- */
-- (KAccount *)readKAccount;
 @end

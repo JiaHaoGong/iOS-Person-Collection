@@ -14,6 +14,5 @@
 #define USER_AGE  @"user_age"
 
 
-#import "FastCoder.h"
 
 #endif /* Header_h */

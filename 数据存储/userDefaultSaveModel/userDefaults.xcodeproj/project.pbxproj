@@ -15,7 +15,6 @@
 		DE0E0F491BE7064D008D4896 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE0E0F471BE7064D008D4896 /* LaunchScreen.storyboard */; };
 		DE0E0F541BE7064D008D4896 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0E0F531BE7064D008D4896 /* ____Tests.m */; };
 		DE0E0F5F1BE7064D008D4896 /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0E0F5E1BE7064D008D4896 /* ____UITests.m */; };
-		DE0E0F721BE71291008D4896 /* FastCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0E0F711BE71291008D4896 /* FastCoder.m */; };
 		DE0E0F781BE730C5008D4896 /* DataHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0E0F771BE730C5008D4896 /* DataHandle.m */; };
 		DE3EB7511BEB4AEE007EB3C7 /* UpdataInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DE3EB7501BEB4AEE007EB3C7 /* UpdataInfo.m */; };
 		EB2579301C89CC9600CF140E /* Header.h in Sources */ = {isa = PBXBuildFile; fileRef = DE0E0F6F1BE70774008D4896 /* Header.h */; };
@@ -67,8 +66,6 @@
 		DE0E0F5E1BE7064D008D4896 /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
 		DE0E0F601BE7064D008D4896 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE0E0F6F1BE70774008D4896 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
-		DE0E0F701BE71291008D4896 /* FastCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastCoder.h; sourceTree = "<group>"; };
-		DE0E0F711BE71291008D4896 /* FastCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastCoder.m; sourceTree = "<group>"; };
 		DE0E0F761BE730C5008D4896 /* DataHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHandle.h; sourceTree = "<group>"; };
 		DE0E0F771BE730C5008D4896 /* DataHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHandle.m; sourceTree = "<group>"; };
 		DE3EB74F1BEB4AEE007EB3C7 /* UpdataInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdataInfo.h; sourceTree = "<group>"; };
@@ -164,8 +161,6 @@
 				DE0E0F391BE7064D008D4896 /* Supporting Files */,
 				DE0E0F761BE730C5008D4896 /* DataHandle.h */,
 				DE0E0F771BE730C5008D4896 /* DataHandle.m */,
-				DE0E0F701BE71291008D4896 /* FastCoder.h */,
-				DE0E0F711BE71291008D4896 /* FastCoder.m */,
 				DE0E0F6F1BE70774008D4896 /* Header.h */,
 			);
 			path = "数据存储";
@@ -366,7 +361,6 @@
 				EB65F2221C8B1AB300B32A1E /* AccountManager.m in Sources */,
 				DE3EB7511BEB4AEE007EB3C7 /* UpdataInfo.m in Sources */,
 				DE0E0F3E1BE7064D008D4896 /* AppDelegate.m in Sources */,
-				DE0E0F721BE71291008D4896 /* FastCoder.m in Sources */,
 				EB65F2421C8B1AE100B32A1E /* Account.m in Sources */,
 				EB65F24D1C8B1B0B00B32A1E /* Person.m in Sources */,
 				EB65F24E1C8B1B0B00B32A1E /* Teacher.m in Sources */,
@@ -513,7 +507,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "/Users/hyh/GitHub/DataStorage/数据存储/Header.h";
+				GCC_PREFIX_HEADER = "/Users/hyh/Desktop/iOSPersonTest/数据存储/userDefaultSaveModel/数据存储/Header.h";
 				INFOPLIST_FILE = "数据存储/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xinchuangoc.----";
@@ -525,7 +519,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "/Users/hyh/GitHub/DataStorage/数据存储/Header.h";
+				GCC_PREFIX_HEADER = "/Users/hyh/Desktop/iOSPersonTest/数据存储/userDefaultSaveModel/数据存储/Header.h";
 				INFOPLIST_FILE = "数据存储/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xinchuangoc.----";

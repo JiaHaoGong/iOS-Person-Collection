@@ -8,8 +8,12 @@
 
 #import "Account.h"
 
-
 @implementation Account
+
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName{
+    return @{@"Id":@"id"};
+}
 
 - (void)encodeWithCoder:(NSCoder *)aCoder{
 
@@ -17,7 +21,7 @@
     [aCoder encodeObject:self.accId forKey:@"accId"];
     [aCoder encodeObject:self.accToken forKey:@"accToken"];
     [aCoder encodeObject:self.crtime forKey:@"crtime"];
-    [aCoder encodeObject:self.id forKey:@"id"];
+    [aCoder encodeObject:self.Id forKey:@"id"];
     [aCoder encodeObject:self.lastLogin forKey:@"lastLogin"];
     [aCoder encodeObject:self.lat forKey:@"lat"];
     [aCoder encodeObject:self.lng forKey:@"lng"];
@@ -37,7 +41,7 @@
         self.accId = [aDecoder decodeObjectForKey:@"accId"];
         self.accToken = [aDecoder decodeObjectForKey:@"accToken"];
         self.crtime = [aDecoder decodeObjectForKey:@"crtime"];
-        self.id = [aDecoder decodeObjectForKey:@"id"];
+        self.Id = [aDecoder decodeObjectForKey:@"id"];
         self.lastLogin = [aDecoder decodeObjectForKey:@"lastLogin"];
         self.lat = [aDecoder decodeObjectForKey:@"lat"];
         self.lng = [aDecoder decodeObjectForKey:@"lng"];
@@ -53,8 +57,6 @@
     return self;
 }
 
-- (void)setAcc:(NSString *)acc{
-    _acc = acc;
-}
+
 
 @end

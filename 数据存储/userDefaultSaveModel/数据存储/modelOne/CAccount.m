@@ -34,7 +34,7 @@
     [aCoder encodeObject:self.email forKey:@"email"];
     [aCoder encodeObject:self.fax forKey:@"fax"];
     [aCoder encodeObject:self.intro forKey:@"intro"];
-    [aCoder encodeObject:self.licenseNum forKey:@"licenseNum"];
+    [aCoder encodeObject:self.licenceNum forKey:@"licenceNum"];
     [aCoder encodeObject:self.mainBusiness forKey:@"mainBusiness"];
     [aCoder encodeObject:self.pic forKey:@"pic"];
     [aCoder encodeObject:self.tel forKey:@"tel"];
@@ -68,7 +68,7 @@
         self.email = [aDecoder decodeObjectForKey:@"email"];
         self.fax = [aDecoder decodeObjectForKey:@"fax"];
         self.intro = [aDecoder decodeObjectForKey:@"intro"];
-        self.licenseNum = [aDecoder decodeObjectForKey:@"licenseNum"];
+        self.licenceNum = [aDecoder decodeObjectForKey:@"licenceNum"];
         self.mainBusiness = [aDecoder decodeObjectForKey:@"mainBusiness"];
         self.pic = [aDecoder decodeObjectForKey:@"pic"];
         self.tel = [aDecoder decodeObjectForKey:@"tel"];

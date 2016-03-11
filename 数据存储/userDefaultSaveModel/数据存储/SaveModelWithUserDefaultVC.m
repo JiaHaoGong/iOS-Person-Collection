@@ -111,10 +111,10 @@
     account.crtime = @"特使";
     
     //保存Account模型到本地
-    [[AccountManager shareAccount] saveCurrentAccount:account forKey:@"currentAccount"];
+    [AccountManager shareAccount].currentAccount = account;
     
     //从本地读取Account
-    Account *getCurrentAccount = [[AccountManager shareAccount] getCurrentAccountForKey:@"currentAccount"];
+    Account *getCurrentAccount = [AccountManager shareAccount].currentAccount;
     NSLog(@"getCurrentAccount.acc%@",getCurrentAccount.acc);
 }
 
@@ -134,7 +134,7 @@
     [AccountManager shareAccount].pAccounts = pAccountArray;
     
     //从本地读取账户模型
-    PAccount *testP = [[AccountManager shareAccount] readPAccount];
+    PAccount *testP = [AccountManager shareAccount].pAccounts;
     NSLog(@"testP%@",testP.acc);
     
     
@@ -151,7 +151,7 @@
     [AccountManager shareAccount].cAccounts = cAccountArray;
     
     //从本地读取账户模型
-    CAccount *testC = [[AccountManager shareAccount] readCAccount];
+    CAccount *testC = [AccountManager shareAccount].cAccounts;
     NSLog(@"testC%@",testC.acc);
     NSLog(@"testC%@",testC.star);
     
@@ -167,7 +167,7 @@
     [AccountManager shareAccount].kAccounts = kAccountArray;
     
     //从本地读取账户模型
-    KAccount *testK = [[AccountManager shareAccount] readKAccount];
+    KAccount *testK = [AccountManager shareAccount].kAccounts;
     NSLog(@"testK%@",testK.acc);
     NSLog(@"testK%@",testK.job);
 

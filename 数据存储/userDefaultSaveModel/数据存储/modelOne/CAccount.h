@@ -31,7 +31,7 @@
 @property (nonatomic, copy) NSString *email;
 @property (nonatomic, copy) NSString *fax;
 @property (nonatomic, copy) NSString *intro;
-@property (nonatomic, copy) NSString *licenseNum;
+@property (nonatomic, copy) NSString *licenceNum;
 @property (nonatomic, copy) NSString *mainBusiness;
 @property (nonatomic, copy) NSString *pic;
 @property (nonatomic, copy) NSString *tel;
@@ -39,6 +39,6 @@
 @property (nonatomic, copy) NSString *picompanyTypec;
 @property (nonatomic, copy) NSString *workDays;
 @property (nonatomic, copy) NSString *workTime;
-
+@property (nonatomic, copy) NSString *mobileVerifyCode;
 
 @end

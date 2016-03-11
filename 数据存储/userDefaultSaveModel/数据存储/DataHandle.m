@@ -7,7 +7,7 @@
 //
 
 #import "DataHandle.h"
-#import "FastCoder.h"
+
 
 static DataHandle *handleData = nil;
 
@@ -23,34 +23,25 @@ static DataHandle *handleData = nil;
 }
 
 -(void)storeObject:(id)value forKey:(NSString *)key{
-    NSData *data = [FastCoder dataWithRootObject:value];
-    if (data) {
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        [userDefaults setObject:data forKey:key];
-    }
+
     
 }
 
 -(id)valueWithKey:(NSString *)key{
     NSData *data = [[NSUserDefaults standardUserDefaults]valueForKey:key];
-    return [FastCoder objectWithData:data];
+    id a;
+    return a;
 }
 
 -(void)storeObjectToPlist:(id)value forFileName:(NSString *)file_name{
     
   NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]stringByAppendingPathComponent:file_name];
     
-    NSData *data = [FastCoder dataWithRootObject:value];
-    if (data) {
-        [data writeToFile:filePath atomically:YES];
-    }
+
 }
 
 -(id)getDataAccordingToFileName:(NSString *)file_name{
-    
-    NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]stringByAppendingPathComponent:file_name];
-    
-    NSData *data = [NSData dataWithContentsOfFile:filePath];
-    return [FastCoder objectWithData:data];
+    id a;
+    return a;
 }
 @end
