@@ -1,89 +1,25 @@
 //
-//  saveModelWithUserDefaultVC.m
-//  数据存储
+//  ViewController.m
+//  Singleton
 //
-//  Created by ylgwhyh on 16/3/5.
-//  Copyright © 2016年 ln. All rights reserved.
+//  Created by ylgwhyh on 16/3/15.
+//  Copyright © 2016年 com.ylgwhyh.cn. All rights reserved.
 //
 
-#import "SaveModelWithUserDefaultVC.h"
-#import "Person.h"
-#import "Teacher.h"
+#import "ViewController.h"
 
-#import "Account.h"
-#import "PAccount.h"
-#import "AccountManager.h"
-
-@interface SaveModelWithUserDefaultVC ()
+@interface ViewController ()
 
 @end
 
-@implementation SaveModelWithUserDefaultVC
+@implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //初始化数据
-    NSMutableArray *personsArray = [NSMutableArray array];
-    NSArray *arrayWithString = [NSMutableArray array];
-    Person *p1 = [[Person alloc] init];
-    p1.name = @"p1";
-    p1.age = @"";
-    
-    Person *pTwo = [[Person alloc] init];
-    pTwo.name = @"p2";
-    pTwo.age = nil;
-    
-    Teacher *Te1 = [[Teacher alloc] init];
-    Te1.t_name = @"老师1";
-    Te1.t_teacher_age = nil;
-    Te1.t_subject = @"";
-    
-    [personsArray addObject:p1];
-    [personsArray addObject:pTwo];
-    
-    arrayWithString = @[@" ",@" ", [NSNull null]]; //userdefault不能存这种格式的
-    //arrayWithString = @[@"和", @"1",@"1", @"1"];
-    
-    //将数组或模型转为NSdata
-    NSData *archiveData = [NSKeyedArchiver archivedDataWithRootObject:arrayWithString];
-    
-    //利用userDefault存储
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    
-    //直接将模型利用userDefault存储不行
-    //    [userDefaults setObject:p1 forKey:@"p1"];
-    //    [userDefaults setObject:pTwo forKey:@"pTwo"];
-    //    [userDefaults setObject:Te1 forKey:@"Te1"];
-    
-    //直接存储存有模型的数组也不行
-    //    [userDefaults setObject:personsArray forKey:@"personArray"];
-    
-    //[userDefaults setObject:arrayWithString forKey:@"arrayWithString"];
-    
-    [userDefaults setObject:archiveData forKey:@"arrayWithString"];
-    
-    //从userDefault取数据
-    //    NSArray *personArrayRead = [userDefaults arrayForKey:@"personArray"];
-    //    for(Person *ps in personArrayRead){
-    //        NSLog(@"Person.name=%@",ps.name);
-    //        NSLog(@"Person.age=%@",ps.age);
-    //    }
-    
-    //NSData *arrayWithStringReadData = [userDefaults dataForKey:@"arrayWithString"];
-    //NSArray *arrayWithStringRead = [userDefaults dataForKey:@"arrayWithString"];
-    
-    //NSArray *arrayWithStringRead = [NSKeyedUnarchiver unarchiveObjectWithData:arrayWithStringReadData];
-    
-    
-    
     [self showSaveModelWithUserDefaults];
     [self showSavepAccountModelWithUserDefaults];
-
-    
-    //addObjectsFromArray:userArrayC];
-    
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -160,7 +96,6 @@
     KAccount *testK = [AccountManager shareAccount].kAccounts;
     NSLog(@"testK%@",testK.acc);
     NSLog(@"testK%@",testK.job);
-
+    
 }
-
 @end
