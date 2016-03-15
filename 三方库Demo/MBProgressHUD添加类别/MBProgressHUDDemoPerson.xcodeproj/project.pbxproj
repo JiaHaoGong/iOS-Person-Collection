@@ -17,7 +17,8 @@
 		EB145AC11C92778600F75B0D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EB145ABD1C92778600F75B0D /* LICENSE */; };
 		EB145AC21C92778600F75B0D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EB145ABF1C92778600F75B0D /* MBProgressHUD.m */; };
 		EB145AC31C92778600F75B0D /* README.mdown in Sources */ = {isa = PBXBuildFile; fileRef = EB145AC01C92778600F75B0D /* README.mdown */; };
-		EB9569B01C92B927003785A2 /* MBProgressHUD+XGJ.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9569AF1C92B927003785A2 /* MBProgressHUD+XGJ.m */; };
+		EB31D5A61C9843CC00338333 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EB31D5A51C9843CC00338333 /* MBProgressHUD.bundle */; };
+		EB7D93AF1C983673007CA0FB /* MBProgressHUD+YL.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7D93AE1C983673007CA0FB /* MBProgressHUD+YL.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +39,9 @@
 		EB145ABF1C92778600F75B0D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		EB145AC01C92778600F75B0D /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.mdown; sourceTree = "<group>"; };
 		EB145AC91C9299FE00F75B0D /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		EB9569AE1C92B927003785A2 /* MBProgressHUD+XGJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+XGJ.h"; sourceTree = "<group>"; };
-		EB9569AF1C92B927003785A2 /* MBProgressHUD+XGJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+XGJ.m"; sourceTree = "<group>"; };
+		EB31D5A51C9843CC00338333 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		EB7D93AD1C983673007CA0FB /* MBProgressHUD+YL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+YL.h"; sourceTree = "<group>"; };
+		EB7D93AE1C983673007CA0FB /* MBProgressHUD+YL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+YL.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,11 +74,10 @@
 		EB145AA11C92759F00F75B0D /* MBProgressHUDDemoPerson */ = {
 			isa = PBXGroup;
 			children = (
+				EB7D93AC1C983420007CA0FB /* MBProgressHUD+YL */,
 				EB145ABC1C92778600F75B0D /* MBProgressHUD */,
 				EB145AA51C92759F00F75B0D /* AppDelegate.h */,
 				EB145AA61C92759F00F75B0D /* AppDelegate.m */,
-				EB9569AE1C92B927003785A2 /* MBProgressHUD+XGJ.h */,
-				EB9569AF1C92B927003785A2 /* MBProgressHUD+XGJ.m */,
 				EB145AC91C9299FE00F75B0D /* Common.h */,
 				EB145AA81C92759F00F75B0D /* ViewController.h */,
 				EB145AA91C92759F00F75B0D /* ViewController.m */,
@@ -110,6 +111,16 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		EB7D93AC1C983420007CA0FB /* MBProgressHUD+YL */ = {
+			isa = PBXGroup;
+			children = (
+				EB7D93AD1C983673007CA0FB /* MBProgressHUD+YL.h */,
+				EB7D93AE1C983673007CA0FB /* MBProgressHUD+YL.m */,
+				EB31D5A51C9843CC00338333 /* MBProgressHUD.bundle */,
+			);
+			path = "MBProgressHUD+YL";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,8 +129,8 @@
 			buildConfigurationList = EB145AB61C92759F00F75B0D /* Build configuration list for PBXNativeTarget "MBProgressHUDDemoPerson" */;
 			buildPhases = (
 				EB145A9B1C92759F00F75B0D /* Sources */,
-				EB145A9C1C92759F00F75B0D /* Frameworks */,
 				EB145A9D1C92759F00F75B0D /* Resources */,
+				EB145A9C1C92759F00F75B0D /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,7 +152,6 @@
 				TargetAttributes = {
 					EB145A9E1C92759F00F75B0D = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = 9RCEN2CNQL;
 					};
 				};
 			};
@@ -170,6 +180,7 @@
 			files = (
 				EB145AB21C92759F00F75B0D /* LaunchScreen.storyboard in Resources */,
 				EB145AAF1C92759F00F75B0D /* Assets.xcassets in Resources */,
+				EB31D5A61C9843CC00338333 /* MBProgressHUD.bundle in Resources */,
 				EB145AC11C92778600F75B0D /* LICENSE in Resources */,
 				EB145AAD1C92759F00F75B0D /* Main.storyboard in Resources */,
 			);
@@ -187,8 +198,8 @@
 				EB145AC21C92778600F75B0D /* MBProgressHUD.m in Sources */,
 				EB145AC31C92778600F75B0D /* README.mdown in Sources */,
 				EB145ABB1C92771D00F75B0D /* VIMessage.m in Sources */,
+				EB7D93AF1C983673007CA0FB /* MBProgressHUD+YL.m in Sources */,
 				EB145AA41C92759F00F75B0D /* main.m in Sources */,
-				EB9569B01C92B927003785A2 /* MBProgressHUD+XGJ.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@
 static BOOL isShow = YES;
 static VIMessage *message = nil;
 #define is_iOS7 [[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0
+
 @interface VIMessage ()<UIAlertViewDelegate>
 
 @end
@@ -33,7 +34,6 @@ static VIMessage *message = nil;
     
     UIAlertView *alertView;
     if (is_iOS7) {
-        
        alertView = [[UIAlertView alloc] initWithTitle:nil
                                               message:title
                                              delegate:self
@@ -73,6 +73,7 @@ static VIMessage *message = nil;
     
     isShow = YES;
 }
+
 
 
 @end

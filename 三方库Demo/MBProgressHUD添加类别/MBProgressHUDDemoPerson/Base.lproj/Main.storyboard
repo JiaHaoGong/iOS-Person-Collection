@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Gcj-iT-lUz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Gcj-iT-lUz">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,7 +19,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbV-tz-cLp">
                                 <rect key="frame" x="62" y="127" width="63" height="30"/>
-                                <animations/>
                                 <state key="normal" title="测试HUD"/>
                                 <connections>
                                     <action selector="testHUD:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sVn-XA-BOd"/>
@@ -27,7 +26,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awz-IF-bJk">
                                 <rect key="frame" x="62" y="182" width="72" height="30"/>
-                                <animations/>
                                 <state key="normal" title="测试HUD2"/>
                                 <connections>
                                     <action selector="testHUD2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ppA-dD-m3e"/>
@@ -35,22 +33,19 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iW5-rH-ShU">
                                 <rect key="frame" x="63" y="236" width="60" height="30"/>
-                                <animations/>
                                 <state key="normal" title="测试菊花"/>
                                 <connections>
                                     <action selector="testHUDChrysanthemum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ixz-oq-nYq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyQ-Cs-hFm">
-                                <rect key="frame" x="62" y="279" width="60" height="30"/>
-                                <animations/>
-                                <state key="normal" title="取消菊花"/>
+                                <rect key="frame" x="58" y="279" width="69" height="30"/>
+                                <state key="normal" title="测试菊花2"/>
                                 <connections>
                                     <action selector="cancelChrysanthemum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N2e-ve-lRP"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Yq1-oT-4L3"/>
@@ -74,14 +69,12 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPt-zH-mJF">
                                 <rect key="frame" x="98" y="80" width="63" height="30"/>
-                                <animations/>
                                 <state key="normal" title="测试HUD"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="ZML-CZ-Z09"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="0yf-5u-k2i"/>
@@ -100,7 +93,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xM8-2A-Ra5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

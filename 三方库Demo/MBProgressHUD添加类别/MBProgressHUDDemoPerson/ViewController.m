@@ -8,8 +8,11 @@
 
 #import "ViewController.h"
 #import "MBProgressHUD.h"
+#import "MBProgressHUD+YL.h"
 #import "Common.h"
-#import "MBProgressHUD+XGJ.h"
+
+#define IPHONE_HEIGHT   [UIScreen mainScreen].bounds.size.height
+#define IPHONE_WIDTH   [UIScreen mainScreen].bounds.size.width
 
 @interface ViewController ()
 
@@ -54,16 +57,22 @@
     hud.removeFromSuperViewOnHide = YES;
     hud.dimBackground = YES;
     
-    sleep(2000);
+    [self performSelector:@selector(hideHUDForView) withObject:[NSNumber numberWithBool:YES] afterDelay:0.9];
     
+}
+
+- (void)hideHUDForView{
     [MBProgressHUD hideHUDForView:self.view animated:YES];
-    
 }
 
 - (IBAction)cancelChrysanthemum:(id)sender {
     
-    //需要菊花
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    [MBProgressHUD showPrompting:@"请骚等一会儿"];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        
+        [MBProgressHUD hideHUD];
+    });
 }
 
 - (void)prompt{
@@ -81,7 +90,6 @@
     hud.customView = imageView;
     //hud.dimBackground = YES;
     hud.color = RGB(90, 91, 92); //矩形框背景色
-    
     
     __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{

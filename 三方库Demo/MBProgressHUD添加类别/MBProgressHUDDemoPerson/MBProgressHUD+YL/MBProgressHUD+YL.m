@@ -1,21 +1,21 @@
 //
-//  MBProgressHUD+XGJMBProgressHUD.m
+//  MBProgressHUD+MBProgressHUD.m
 //  MBProgressHUDDemoPerson
 //
 //  Created by ylgwhyh on 16/3/11.
 //  Copyright © 2016年 com.hyh. All rights reserved.
 //
 
-#import "MBProgressHUD+XGJ.h"
+#import "MBProgressHUD+YL.h"
 
-@implementation MBProgressHUD (XGJ)
+@implementation MBProgressHUD (YL)
 
-#define IPHONE_HEIGHT_MBProgressHUD_XGJ   [UIScreen mainScreen].bounds.size.height
-#define IPHONE_WIDTH_MBProgressHUD_XGJ    [UIScreen mainScreen].bounds.size.width
+#define IPHONE_HEIGHT_MBProgressHUD_YL   [UIScreen mainScreen].bounds.size.height
+#define IPHONE_WIDTH_MBProgressHUD_YL    [UIScreen mainScreen].bounds.size.width
 
 // RGB颜色设定
-#define RGB_MBProgressHUD_XGJ(r, g, b) [UIColor colorWithRed:(r) / 255.0f green:(g) / 255.0f blue:(b) / 255.0f alpha:1]
-#define RGBA_MBProgressHUD_XGJ(r, g, b, a) [UIColor colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:a]
+#define RGB_MBProgressHUD(r, g, b) [UIColor colorWithRed:(r) / 255.0f green:(g) / 255.0f blue:(b) / 255.0f alpha:1]
+#define RGBA_MBProgressHUD(r, g, b, a) [UIColor colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:a]
 
 + (void)showPrompting:(NSString *)promptTitle{
     [self show:promptTitle icon:nil view:nil];
@@ -39,13 +39,16 @@
     hud.labelFont = [UIFont systemFontOfSize:14];
     
     hud.opacity = 0.7;
-    hud.color = RGBA_MBProgressHUD_XGJ(90, 91, 92, 0.7); //矩形框背景色
+    hud.color = RGBA_MBProgressHUD(90, 91, 92, 0.7); //矩形框背景色
     
     if(icon != nil){
         
         UIImageView *imageView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:icon] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-        imageView.center = CGPointMake(IPHONE_WIDTH_MBProgressHUD_XGJ/2, IPHONE_HEIGHT_MBProgressHUD_XGJ/2);
+        imageView.center = CGPointMake(IPHONE_WIDTH_MBProgressHUD_YL/2, IPHONE_HEIGHT_MBProgressHUD_YL/2);
         imageView.bounds = CGRectMake(0, 10, 20, 20);
+        
+        // 设置图片(从Bundle文件)
+        //hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"MBProgressHUD.bundle/%@", icon]]];
         
         hud.customView = imageView;
         hud.mode = MBProgressHUDModeCustomView;
@@ -64,5 +67,18 @@
     
     [self show:success icon:@"crying.png" view:view];
 }
+
++ (void)hideHUD
+{
+    UIView *view = [[UIApplication sharedApplication].windows lastObject];
+    [self hideHUDForView:view];
+}
+
+
++ (void) hideHUDForView:(UIView *)view
+{
+    [self hideHUDForView:view animated:YES];
+}
+
 
 @end

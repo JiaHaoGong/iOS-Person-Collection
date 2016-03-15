@@ -2,8 +2,8 @@
 //  Common.h
 //  qzc
 //
-//  Created by jxm apple on 16/2/16.
-//  Copyright © 2016年 xinggenji. All rights reserved.
+//  Created by  apple on 16/2/16.
+//  Copyright © 2016年 . All rights reserved.
 //
 
 
