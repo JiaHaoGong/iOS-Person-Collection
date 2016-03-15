@@ -9,13 +9,20 @@
 #import "ViewController.h"
 #import "OneVC.h"
 #import "TwoVC.h"
-
+#import "SBTMainVC.h"
+#import "FiveVC.h"
 
 @interface ViewController ()
 
 - (IBAction)pushOne:(id)sender;
 
 - (IBAction)pushTwo:(id)sender;
+
+- (IBAction)pushFour:(id)sender;
+
+- (IBAction)pushFive:(id)sender;
+
+- (IBAction)pushSix:(id)sender;
 
 @end
 
@@ -35,6 +42,7 @@
     
 }
 
+//storyBoard传值
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     // segue.identifier：获取连线的ID
     if ([segue.identifier isEqualToString:@"pushOneID"]) {
@@ -53,5 +61,29 @@
 }
 
 - (IBAction)pushTwo:(id)sender {
+    
+}
+
+// 仅仅连线，然后用代码跳转
+// 根据指定线的ID跳转到目标Vc
+- (IBAction)pushFour:(id)sender {
+    [self performSegueWithIdentifier:@"pushFourID" sender:self];
+}
+
+- (IBAction)pushFive:(id)sender {
+    FiveVC *next = [self.storyboard instantiateViewControllerWithIdentifier:@"FiveVCID"];
+    [self.navigationController pushViewController:next animated:YES];
+}
+
+- (IBAction)pushSix:(id)sender {
+    
+    // 获取指定的Storyboard，name填写Storyboard的文件名
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Two" bundle:nil];
+    // 从Storyboard上按照identifier获取指定的界面（VC），identifier必须是唯一的
+    SBTMainVC *next = [storyboard instantiateViewControllerWithIdentifier:@"SBTMainVCID"];
+
+    next.name = @"SMTMainVC";
+    next.age = 330;
+    [self.navigationController pushViewController:next animated:YES];
 }
 @end

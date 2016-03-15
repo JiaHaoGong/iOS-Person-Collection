@@ -16,6 +16,9 @@
 		EB157BF01C95C1C00039CBA9 /* TwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB157BEF1C95C1C00039CBA9 /* TwoVC.m */; };
 		EB157BF21C95C5FC0039CBA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB157BF11C95C5FC0039CBA9 /* Main.storyboard */; };
 		EB5353661C95C9D700F0C70A /* ThreeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5353651C95C9D700F0C70A /* ThreeVC.m */; };
+		EB7D93A41C9820DA007CA0FB /* Two.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB7D93A31C9820DA007CA0FB /* Two.storyboard */; };
+		EB7D93A81C98216A007CA0FB /* SBTMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7D93A71C98216A007CA0FB /* SBTMainVC.m */; };
+		EB7D93AB1C982357007CA0FB /* FiveVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7D93AA1C982357007CA0FB /* FiveVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,11 @@
 		EB157BF11C95C5FC0039CBA9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EB5353641C95C9D700F0C70A /* ThreeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeVC.h; sourceTree = "<group>"; };
 		EB5353651C95C9D700F0C70A /* ThreeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeVC.m; sourceTree = "<group>"; };
+		EB7D93A31C9820DA007CA0FB /* Two.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Two.storyboard; path = ../Two.storyboard; sourceTree = "<group>"; };
+		EB7D93A61C98216A007CA0FB /* SBTMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTMainVC.h; sourceTree = "<group>"; };
+		EB7D93A71C98216A007CA0FB /* SBTMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTMainVC.m; sourceTree = "<group>"; };
+		EB7D93A91C982357007CA0FB /* FiveVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveVC.h; sourceTree = "<group>"; };
+		EB7D93AA1C982357007CA0FB /* FiveVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,9 @@
 				EB157BEF1C95C1C00039CBA9 /* TwoVC.m */,
 				EB5353641C95C9D700F0C70A /* ThreeVC.h */,
 				EB5353651C95C9D700F0C70A /* ThreeVC.m */,
+				EB7D93A91C982357007CA0FB /* FiveVC.h */,
+				EB7D93AA1C982357007CA0FB /* FiveVC.m */,
+				EB7D93A51C982141007CA0FB /* StoryBoardTwo */,
 				EB157BE01C95BE9C0039CBA9 /* Assets.xcassets */,
 				EB157BE21C95BE9C0039CBA9 /* LaunchScreen.storyboard */,
 				EB157BE51C95BE9C0039CBA9 /* Info.plist */,
@@ -92,6 +103,16 @@
 				EB157BD51C95BE9C0039CBA9 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB7D93A51C982141007CA0FB /* StoryBoardTwo */ = {
+			isa = PBXGroup;
+			children = (
+				EB7D93A61C98216A007CA0FB /* SBTMainVC.h */,
+				EB7D93A71C98216A007CA0FB /* SBTMainVC.m */,
+				EB7D93A31C9820DA007CA0FB /* Two.storyboard */,
+			);
+			path = StoryBoardTwo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +175,7 @@
 				EB157BE41C95BE9C0039CBA9 /* LaunchScreen.storyboard in Resources */,
 				EB157BF21C95C5FC0039CBA9 /* Main.storyboard in Resources */,
 				EB157BE11C95BE9C0039CBA9 /* Assets.xcassets in Resources */,
+				EB7D93A41C9820DA007CA0FB /* Two.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,8 +189,10 @@
 				EB157BDC1C95BE9C0039CBA9 /* ViewController.m in Sources */,
 				EB157BED1C95C1B50039CBA9 /* OneVC.m in Sources */,
 				EB157BD91C95BE9C0039CBA9 /* AppDelegate.m in Sources */,
+				EB7D93A81C98216A007CA0FB /* SBTMainVC.m in Sources */,
 				EB5353661C95C9D700F0C70A /* ThreeVC.m in Sources */,
 				EB157BF01C95C1C00039CBA9 /* TwoVC.m in Sources */,
+				EB7D93AB1C982357007CA0FB /* FiveVC.m in Sources */,
 				EB157BD61C95BE9C0039CBA9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

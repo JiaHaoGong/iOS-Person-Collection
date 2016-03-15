@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HqA-x6-cbg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HqA-x6-cbg">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="QNy-AP-EAq">
             <objects>
-                <viewController id="1ML-RB-ZB5" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="MainVC" id="1ML-RB-ZB5" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jR9-fC-5vq"/>
                         <viewControllerLayoutGuide type="bottom" id="PTV-Pv-LUn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0Df-Xe-AtN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DG-MO-yfo">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="传值One"/>
+                                <state key="normal" title="storyBoard传值One"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="49" y="128" width="59" height="30"/>
+                                    <rect key="frame" x="49" y="88" width="134" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="pushOne:" destination="1ML-RB-ZB5" eventType="touchUpInside" id="JQ5-A3-6QR"/>
@@ -30,10 +30,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lr2-Yz-c6U">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
                                 <state key="normal" title="push不传值"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="33" y="241" width="79" height="30"/>
+                                    <rect key="frame" x="49" y="203" width="79" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="ohS-M2-V6c" kind="push" id="fg0-ef-d1o"/>
@@ -41,24 +40,55 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZK-oo-FFV">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="传值Two"/>
+                                <state key="normal" title="storyBoard传值Two"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="49" y="190" width="59" height="30"/>
+                                    <rect key="frame" x="49" y="144" width="134" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="pushTwo:" destination="1ML-RB-ZB5" eventType="touchUpInside" id="Sx0-W0-pLC"/>
                                     <segue destination="EQl-mc-uNZ" kind="show" identifier="pushTwoID" id="6BF-uN-HJh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsd-2I-OIO">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="跳转到storyBoard中独立的页面Five"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="36" y="305" width="238" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="pushFive:" destination="1ML-RB-ZB5" eventType="touchUpInside" id="VBx-TY-DgG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZD-uk-SgX">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="跳转到另一个storyBoard并传值Six"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="17" y="350" width="231" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="pushSix:" destination="1ML-RB-ZB5" eventType="touchUpInside" id="gPQ-7e-gPh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nL-Pd-Lkx">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="仅仅连线，代码跳转（利用线的identifier）Four"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="3" y="255" width="317" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="pushFour:" destination="1ML-RB-ZB5" eventType="touchUpInside" id="ykk-xM-cSZ"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="6DG-MO-yfo"/>
                                 <exclude reference="Lr2-Yz-c6U"/>
                                 <exclude reference="cZK-oo-FFV"/>
+                                <exclude reference="tsd-2I-OIO"/>
+                                <exclude reference="yZD-uk-SgX"/>
+                                <exclude reference="0nL-Pd-Lkx"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -66,11 +96,17 @@
                                 <include reference="6DG-MO-yfo"/>
                                 <include reference="Lr2-Yz-c6U"/>
                                 <include reference="cZK-oo-FFV"/>
+                                <include reference="tsd-2I-OIO"/>
+                                <include reference="yZD-uk-SgX"/>
+                                <include reference="0nL-Pd-Lkx"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="VXT-Ez-dTm"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <segue destination="bpx-Oe-CL8" kind="show" identifier="pushFourID" id="7uA-hJ-iLI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IdP-4l-NKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,15 +121,15 @@
                         <viewControllerLayoutGuide type="bottom" id="RoH-si-clC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7J4-Z4-lOA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOc-qs-fVY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1680" y="-242"/>
+            <point key="canvasLocation" x="1654.5" y="-381"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c8G-je-3tm">
@@ -103,7 +139,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oHR-hk-SEm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -123,27 +158,27 @@
                         <viewControllerLayoutGuide type="bottom" id="ITb-Db-JMo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="POe-Ly-geR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k7d-FG-aWa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1665" y="311"/>
+            <point key="canvasLocation" x="1654.5" y="137"/>
         </scene>
-        <!--View Controller-->
+        <!--界面跳转-->
         <scene sceneID="xAu-kF-mHC">
             <objects>
-                <viewController id="ohS-M2-V6c" sceneMemberID="viewController">
+                <viewController title="界面跳转" id="ohS-M2-V6c" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TRa-Tk-qYo"/>
                         <viewControllerLayoutGuide type="bottom" id="rhR-hi-ZHw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="M2Q-gk-RA7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" red="0.40280111079999997" green="1" blue="0.41358532469999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="uOd-MJ-0pg"/>
@@ -151,7 +186,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X8V-bK-eFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1623" y="1010"/>
+            <point key="canvasLocation" x="1654.5" y="695"/>
+        </scene>
+        <!--FourVC-->
+        <scene sceneID="6Vg-Ur-jFI">
+            <objects>
+                <viewController title="FourVC" id="bpx-Oe-CL8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YRG-od-i40"/>
+                        <viewControllerLayoutGuide type="bottom" id="JEJ-uJ-FDP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gJ2-AE-pqS">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.94705612180431786" blue="0.33953170493767593" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpc-cg-xd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1743" y="1366"/>
+        </scene>
+        <!--FiveVC-->
+        <scene sceneID="SpA-aY-dex">
+            <objects>
+                <viewController storyboardIdentifier="FiveVCID" id="fCe-K6-ZR0" customClass="FiveVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uF6-S2-6L7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hg2-Dl-Z1S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WDc-9s-6Sc">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="storyBoard中独立的页面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="300-Dm-QuY">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="67" y="190" width="186" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="300-Dm-QuY"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="300-Dm-QuY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8jS-Ro-2zL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2265" y="1366"/>
         </scene>
     </scenes>
 </document>
