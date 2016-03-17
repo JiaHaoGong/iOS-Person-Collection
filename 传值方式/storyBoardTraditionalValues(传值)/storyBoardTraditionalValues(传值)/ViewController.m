@@ -43,6 +43,9 @@
 }
 
 //storyBoard传值
+//1，storyBoard里跳转拖线：先点controller，与下一页面链接，并将线设一个identifier值
+//2，在.m里通过[self performSegueWithIdentifier:ID sender:nil]实现跳转。
+//3，如果需要传参，则可重写方法
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     // segue.identifier：获取连线的ID
     if ([segue.identifier isEqualToString:@"pushOneID"]) {
