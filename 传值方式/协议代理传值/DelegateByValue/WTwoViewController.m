@@ -14,9 +14,6 @@
 
 @implementation WTwoViewController
 
--(id)initWithCoder:(NSCoder *)aDecoder
-{
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

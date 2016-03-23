@@ -86,11 +86,6 @@
 {
     return YES;
 }
-- (NSUInteger)supportedInterfaceOrientations
-{
-    return  UIInterfaceOrientationMaskAllButUpsideDown;
-}
-
 
 // iOS(3.0) 设备方向检查（比如：横屏、竖屏等等）在UIViewController类里面能找到相关的很多方法，只需要在子类中重写添加新功能即可
 - (void) willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration

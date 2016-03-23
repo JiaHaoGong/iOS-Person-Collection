@@ -6,6 +6,10 @@
 //  Copyright (c) 2013年 wzrong. All rights reserved.
 //
 
+/**
+ *  代理传值实际是将值传给实现协议的代理
+ */
+
 #import <UIKit/UIKit.h>
 #import "WTwoViewController.h"
 

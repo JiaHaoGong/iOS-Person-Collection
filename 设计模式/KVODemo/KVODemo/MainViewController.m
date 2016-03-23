@@ -63,6 +63,7 @@
     [music setValue:textField.text forKey:@"musicName"];
 }
 
+#pragma mark KVO自动调用的方法
 // 只要Music类的"musicName"属性发生的变化都会触发到以下的方法
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     UILabel *label = (UILabel *)[self.view viewWithTag:100];
